@@ -1,6 +1,12 @@
 import 'package:english_figma_shrt_project/screens/homepage_bottom.dart';
 import 'package:flutter/material.dart';
 
+import 'screens/article_view.dart';
+import 'screens/tab_four.dart';
+import 'screens/tab_one.dart';
+import 'screens/tab_three.dart';
+import 'screens/tab_two.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -26,7 +32,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: BottomNavigationScreen(),
+      home: TabFour(),
     );
   }
 }
