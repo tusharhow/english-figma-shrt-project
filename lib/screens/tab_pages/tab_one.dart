@@ -1,3 +1,4 @@
+import 'package:english_figma_shrt_project/screens/article_view.dart';
 import 'package:flutter/material.dart';
 
 class TabOne extends StatelessWidget {
@@ -389,12 +390,18 @@ class TabOne extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Text(
-                ' ﺎﻴﺳآو ﺎﺑوروﺄﻟ تاداﺪﻣﺈﻟا ﺢﺷ ﺐﺒﺳ ﻂﻔﻨﻟا ﻲﻓ رﺎﻤﺜﺘﺳﺎﻟا ﻊﺟاﺮﺗو ..ﺔﺳﺎﻠﺴﺑ يﺮﺠﻳ ﺎﻟ ﺔﻗﺎﻄﻠﻟ ﻲﻟﺎﺤﻟا لﺎﻘﺘﻧﺎﻟا :"ﻮﻜﻣارأ" ﺲﻴﻴﺒﺋر',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blue,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ArticleView()));
+                },
+                child: Text(
+                  ' ﺎﻴﺳآو ﺎﺑوروﺄﻟ تاداﺪﻣﺈﻟا ﺢﺷ ﺐﺒﺳ ﻂﻔﻨﻟا ﻲﻓ رﺎﻤﺜﺘﺳﺎﻟا ﻊﺟاﺮﺗو ..ﺔﺳﺎﻠﺴﺑ يﺮﺠﻳ ﺎﻟ ﺔﻗﺎﻄﻠﻟ ﻲﻟﺎﺤﻟا لﺎﻘﺘﻧﺎﻟا :"ﻮﻜﻣارأ" ﺲﻴﻴﺒﺋر',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue,
+                  ),
                 ),
               ),
             ),

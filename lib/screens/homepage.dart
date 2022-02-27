@@ -1,3 +1,4 @@
+import 'package:english_figma_shrt_project/screens/tab_pages/tab_one.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -264,63 +265,69 @@ class HomePage extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.remove_circle_outline,
-                      size: 25,
-                      color: Colors.black54,
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Text(
-                      '0.00 (00.00%)',
-                      style: TextStyle(
-                        fontSize: 16,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => TabOne()));
+                  },
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.remove_circle_outline,
+                        size: 25,
                         color: Colors.black54,
                       ),
-                    ),
-                    SizedBox(
-                      width: 8,
-                    ),
-                    Image.asset('images/vec1.png'),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      children: [
-                        Row(
-                          children: [
-                            Text(
-                              '22.21',
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.black54,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Text(
-                              'يعارملا',
-                              style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.black54,
-                              ),
-                            ),
-                          ],
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        '0.00 (00.00%)',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black54,
                         ),
-                        Text(
-                          'ةيدوعسلا يعارملا ةكرش',
-                          style: TextStyle(
-                            fontSize: 13,
-                            color: Colors.black54,
+                      ),
+                      SizedBox(
+                        width: 8,
+                      ),
+                      Image.asset('images/vec1.png'),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                '22.21',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.black54,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                'يعارملا',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.black54,
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                      ],
-                    )
-                  ],
+                          Text(
+                            'ةيدوعسلا يعارملا ةكرش',
+                            style: TextStyle(
+                              fontSize: 13,
+                              color: Colors.black54,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
